@@ -110,12 +110,12 @@
     font-size: 50px;
     position: relative;
     display: flex;
-    padding: 2% 5%;
+    padding: 2% 4%;
 
 }
 
 .my_pic{
-    width: 30%;
+    width: 35%;
     border: none;
 }
 
