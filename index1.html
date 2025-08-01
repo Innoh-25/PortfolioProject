@@ -13,30 +13,64 @@
                 <div class="m_word">MY </div>
                 <div class="m_underline">PORTFOLIO</div>
             </div>
-            <div class="navlinks">
-                <ul class="navlists">
+            <div class="menu">
+                <!--<ul class="navlists">
                     <li><a href="">About Me</a></li>
                     <li><a href="">My Interests</a></li>
                     <li><a href="">Skills</a></li>
                     <li><a href="">Education</a></li>
                     <li><a href="">My Projects</a></li>
                     <li><a href="">Contact Me</a></li>
-                </ul>
+                </ul>-->
+                
+
+
+                <div class="navtabs">
+                    <label for="About_Me" class="About_Me">About Me</label>
+                    <label for="My_Interests" class="My_Interests">My Interests</label>
+                    <label for="Skills" class="Skills">Skills</label>
+                    <label for="Education"  class="Education">Education</label>
+                    <label for="My_Projects" class="My_Projects">My Projects</label>
+                    <label for="Contact_Me" class="Contact_Me">Contact Me</label>
+                </div>
+
+                
             </div>
         </div>
         <div class="home_page">
             <div class="home_details">
+
+                <input type="radio" name="menu_item" id="About_Me" checked hidden>
+                <input type="radio" name="menu_item" id="My_Interests" hidden>
+                <input type="radio" name="menu_item" id="Skills" hidden>
+                <input type="radio" name="menu_item" id="Education" hidden>
+                <input type="radio" name="menu_item" id="My_Projects" hidden>
+                <input type="radio" name="menu_item" id="Contact_Me" hidden>
 
                 <div class="my_pic">
                     <img src="my_pic.png" alt="">
                 </div>
 
 
-                <div class="intro">
-                    <div class="greet">Hi there cousin...</div>
-                    <div class="my_name">Innocent Omurwa here.</div>
-                </div>
+                <div class="side_info">
+                    <div class="About_MeC cont">
+                        <div class="my_name">
+                            <h3>Innocent Omurwa</h3>
+                            <h6><i>Medic, coder, chess fanatic</i>&#x1F60D;</h6>
+                        </div>
 
+                        <div class="box_contents">
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Magnam debitis error eaque commodi amet inventore maiores iusto fugit soluta esse sit iste quisquam atque, magni ipsa quis omnis sequi unde!</p>
+                        </div>
+                    </div>
+
+                    <div class="My_InterestsC cont">My Interests</div>
+                    <div class="SkillsC cont">Skills</div>
+                    <div class="EducationC cont">Education</div>
+                    <div class="My_projectsC cont">My Projects</div>
+                    <div class="Contact_MeC cont">Contact Me</div>
+                </div>
+                        
                 
             </div>
         </div>
