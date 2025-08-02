@@ -4,6 +4,7 @@
 }
 
 .navbar{
+    position: relative;
     width: 100%;
     background-color: darkgray;
     display: flex;
@@ -69,24 +70,6 @@
     font-size: 120%;
 }
 
-/*.navlists li{
-    list-style-type:none;
-    padding: 0px 20px;
-}
-
-.navlists li a{
-    text-decoration: none;
-    padding: 5px 10px;
-    border-radius: 20px;
-    color: maroon;
-}
-
-.navlists li a:hover{
-    background-color: maroon;
-    color: #fff;
-    transition: 1s;
-    font-size: 120%;
-} */
 
 .home_page{
     height: 100vh;
@@ -100,30 +83,12 @@
     justify-content: center;
 }
 
-/*making the background a little darker*/
-/*.home_page::after{
-    content: "";
-    display: block;
-    position: relative;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: rgb(0, 0, 0,0.4);
-}*/
 
-.my_name h3{
-    color: gold;
-}
-
-.my_name h6{
-    color: white;
-}
 
 
 .home_details{
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
     font-size: 50px;
     position: relative;
     display: flex;
@@ -145,16 +110,9 @@
 
 .side_info{
     position: relative;
-    flex-basis: 35%;
-    border: #fff 2px solid;
+    flex-basis: 65%;
 }
 
-.box_contents{
-    position: relative;
-    width:100%;
-    background-color: gold;
-    font-size: 23px;
-}
 
 .side_info .cont{
     display: none;
@@ -167,4 +125,376 @@
 #My_Projects:checked ~ .side_info .My_projectsC,
 #Contact_Me:checked ~ .side_info .Contact_MeC{
     display: block;
+}
+
+#About_Me:checked ~ .menu .navtabs .About_Me{
+    background-color: maroon;
+}
+
+
+
+.intro{
+    color: gold;
+    background-color:rgb(54, 69, 79,0.5) ;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.details{
+   background-color: rgb(106,90,205,0.5);
+   border-radius: 0px 0px 20px 20px;
+   justify-content: center;
+}
+
+.My_InterestsC .intro p{
+    font-size: 23px;
+    color: #fff;
+}
+
+.details h5{
+    color: white;
+}
+
+.details p{
+    color: #DCAE96;
+    font-size: 20px;
+}
+
+.intro,
+.details{
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.side_info .About_MeC{
+    position: relative;
+    top: 150px;
+}
+
+.side_info .About_MeC .in_photo{
+    height: 150px;
+    width: 150px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    position: absolute;
+    top: -130px;
+    left: 40%;
+}
+
+.in_photo img{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+
+.int_item{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    align-items: center;
+    text-align: center;
+}
+
+.int_item .int_pic{
+    position: relative;
+    height: 200px;
+    width: 200px;
+    margin-right: 30px;
+    text-align: center;
+}
+
+.int_item .int_pic img{
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.int_item .int_pic h6{
+    position: absolute;
+    bottom: 10px;
+    color: gold;
+    width: 100%;
+    transition: all 1s;
+}
+
+.int_pic img:hover ~ h6{
+    color: #F7E7CE;
+    transform: translate(0,-80%);
+    font-size: 110%;
+
+}
+
+.My_InterestsC .details{
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.progress{
+  display: flex;
+  align-items: center;
+  border: 2px solid #36454F;
+  border-radius: 10px;
+  padding: 0 10%;
+  justify-content: space-between;
+}
+
+.progress .language{
+    color: #DCAE96;
+}
+
+.progress_value{
+    position: absolute;
+}
+
+.progress-circle {
+  --size: 120px;
+  --progress: 100; /* Set this dynamically via inline style or CSS */
+
+  width: var(--size);
+  height: var(--size);
+  border-radius: 50%;
+  background: conic-gradient(
+    gold calc(var(--progress) * 2%), 
+    #e0e0e0 0
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.progress-circle::before {
+  content: '';
+  position: absolute;
+  width: calc(var(--size) * 0.75);
+  height: calc(var(--size) * 0.75);
+  background: white;
+  border-radius: 50%;
+}
+
+.progress-text {
+  position: relative;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: maroon;
+}
+
+.ed_item{
+    display: flex;
+    font-size: 23px;
+    align-items: center;
+    border: 2px solid #36454F;
+    padding: 15px;
+    border-radius: 10px
+}
+
+#topic{
+    background-color: rgb(128,0,0,0.2);
+    border: none;
+}
+
+.ed_item span{
+    flex-basis: 33%;
+}
+
+.ed_item .course{
+    color: #DCAE96;
+}
+
+.ed_item .institution{
+    color: #F7E7CE;
+}
+
+.ed_item .duration{
+    color: #fff;
+}
+
+.cv a{
+    text-decoration: none;
+    background-color: #DCAE96;
+    color: maroon;
+    font-size: 20px;
+    border-radius: 15px;
+    padding: 10px;
+    border: 5px solid gold;
+}
+
+.cv{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.My_projectsC .details h5{
+    color: #DCAE96;
+}
+
+.My_projectsC .details p{
+    color: #F7E7CE;
+}
+
+.My_projectsC .details a{
+    text-decoration: none;
+    background-color: #DCAE96;
+    color: maroon;
+    font-size: 20px;
+    border-radius: 15px;
+    padding: 10px;
+    border: 5px solid gold;
+}
+
+.icon-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 24px;
+  color: white;
+  position: relative;
+  text-decoration: none;
+}
+
+
+/* Facebook */
+.facebook {
+  background-color: #3b5998;
+  transition: all 0.5s ease-in-out;
+}
+
+.facebook:hover{
+  background-color: rgb(59, 89, 152,0.5);
+  font-size: 120%;
+}
+/* X */
+.x {
+  background-color: #000;
+  transition: all 0.5s ease-in-out;
+}
+
+.x:hover{
+    background-color: rgb(0, 0, 0,0.5);
+    font-size: 120%;
+}
+
+/* Instagram - now square with rounded corners */
+.instagram {
+  border-radius: 15%;
+  background: radial-gradient(circle at 30% 30%, #feda75, #d62976, #962fbf);
+  transition: all 0.5s ease-in-out;
+}
+
+.instagram:hover{
+    background-color: rgb(206, 102, 142,0.5);
+    font-size: 120%;
+}
+
+.instagram .circle {
+  width: 30px;
+  height: 30px;
+  border: 2px solid white;
+  border-radius: 10px;
+}
+.instagram .dot {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 6px;
+  height: 6px;
+  background: white;
+  border-radius: 50%;
+}
+
+/* LinkedIn */
+.linkedin {
+  background-color: #0077B5;
+  font-size: 20px;
+  transition: all 0.5s ease-in-out;
+}
+
+.linkedin:hover{
+    background-color: rgb(0, 119, 181,0.5);
+    font-size: 120%;
+}
+
+.Contact_MeC .details p{
+    line-height: 1.6;
+    letter-spacing: 2px;
+}
+
+.Contact_MeC .details p a{
+    color: blue;
+    text-decoration: none;
+    background-color: rgb(255, 255, 255,0.3);
+}
+
+.separator{
+    position: relative;
+    width: 100%;
+    height: 2px;
+    background-color: darkgrey;
+    margin-top: 20px;
+}
+
+footer{
+    padding: 15px;
+    text-align: center;
+    color: maroon;
+    background-color: #DCAE96;
+}
+
+@media (max-width:1250px){
+    .navbar{
+    width: 100%;
+    background-color: darkgray;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    
+}
+
+
+}
+
+@media (max-width:850px){
+    .navtabs{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.home_page{
+    height: 200vh;
+}
+.home_details{
+    display: flex;
+    flex-direction: column;
+}
+.navtabs{
+    width: 100%;
+}
+.navtabs label{
+    padding: 15px;
+}
+.navtabs label:hover{
+    position: relative;
+    width: 100%;
+}
 }
