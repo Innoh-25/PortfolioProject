@@ -61,11 +61,26 @@ A personalized twist on classic Tic-Tac-Toe, played on a 5x5 grid. Players use t
 Go To My Project 
 
 ✉️ Contact Me
-Feel free to reach out! You can send me an email by clicking a link provided on the web page .
+Feel free to reach out! You can send me an email by clicking 
+
+here 📧.
 
 You can also find me on:
+
+
 Facebook 
+
+
 X (Twitter) 
+
+
 Instagram 
+
+
+LinkedIn 
+
+© 2025 Innocent Omurwa. All rights reserved. 
+
+
 LinkedIn 
 © 2025 Innocent Omurwa. All rights reserved# PortfolioProject
