@@ -56,14 +56,10 @@ I love bringing ideas to life through code! One of my notable projects is:
 Gomoku
 A personalized twist on classic Tic-Tac-Toe, played on a 5x5 grid. Players use the first characters of their first names instead of X's and O's, making each match a unique "signature duel." The goal is to align at least four letters in a row (vertically, horizontally, or diagonally) to win. This game blends the simplicity of Tic-Tac-Toe with the strategic depth of Gomoku, adding identity and flair to every move 🎮.
 
-➡️ 
-
-Go To My Project 
+In the website is a link to the game. You really should try it out!
 
 ✉️ Contact Me
-Feel free to reach out! You can send me an email by clicking 
-
-here 📧.
+Feel free to reach out! You can send me an email by clicking a link provided in the websiate.
 
 You can also find me on:
 
@@ -80,7 +76,3 @@ Instagram
 LinkedIn 
 
 © 2025 Innocent Omurwa. All rights reserved. 
-
-
-LinkedIn 
-© 2025 Innocent Omurwa. All rights reserved# PortfolioProject
