@@ -535,7 +535,7 @@ footer{
 
 
 /* making the website responsive and well laid out in other screens */
-@media (max-width:1250px){
+@media (max-width:1150px){
     .navbar{
     width: 100%;
     background-color: darkgray;
@@ -550,6 +550,20 @@ footer{
 .side_info .About_MeC{
     position: relative;
     top: 150px;
+}
+
+.my_pic{
+    position: absolute;
+    top: -30%;
+    left:0;
+    height: 250px;
+    width: 250px;
+    border-radius: 50%;
+    background-color: gold;
+}
+
+.my_pic img{
+    border-radius: 50%;
 }
 
 
@@ -578,6 +592,16 @@ footer{
 .navtabs label:hover{
     position: relative;
     width: 100%;
+}
+
+.my_pic{
+    position: relative;
+    top: 0;
+    left:0;
+    height: 200px;
+    width: 250px;
+    border-radius: 50%;
+    background-color: gold;
 }
 }
 
