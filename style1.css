@@ -3,6 +3,17 @@
     margin: 0;
 }
 
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body{
+    overflow-x: hidden;
+}
+
+/* Navigation bar styling */
 .navbar{
     position: relative;
     width: 100%;
@@ -12,17 +23,67 @@
     
 }
 
+/* logo styling */
 .logo{
     font-weight: 700;
-    font-size: 32px;
+    font-size: 28px;
+    padding: 0;
 }
 
-.navlinks{
-    font-size: 20px;
-    font-weight: 400;
+/* logo animation */
+.glow{
+    margin: 20px;
+    border-radius: 25px;
+    border: none;
+    outline: none;
+    position: relative;
+    z-index: 1;
 }
 
-.logo, .navlinks{
+
+.glow::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: maroon;
+    border-radius: 25px;
+    z-index: -1;
+    border: none;
+    outline: none;
+}
+
+.glow::before{
+    content: '';
+    background: linear-gradient(
+        45deg,
+        #ff0000,#ff7300,#fffb00,#48ff00,
+        #00ffd5,#002bff,#ff00c8,#ff0000
+    );
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    z-index: -1;
+    background-size: 600%;
+    border-radius: 25px;
+    filter: blur(8px);
+    transition: opacity 0.3s ease-in-out;
+    opacity: 1;
+    animation: glow 5s linear infinite;
+}
+
+@keyframes glow {
+    0%{background-position: 0 0;}
+    50%{background-position: 400% 0;}
+    100%{background-position: 0 0;}
+}
+
+
+.logo{
     padding: 1rem 6rem;
     display: flex;
     align-items: center;
@@ -30,25 +91,12 @@
 }
 
 .navbar .logo .m_word{
-    color: maroon;
+    color: white;
 }
 
-.navbar .logo .m_word, .navbar .logo .m_underline{
-    padding: 2px;
+.navbar .logo .m_underline{
+    color: gold;
 }
-
-.navbar .logo .m_underline::after{
-    content:"";
-    display: block;
-    width: 100%;
-    height: 5px;
-    margin-top: 2px;
-    background-color: maroon;
-    transform: translate(0px,-5px);
-    border-radius: 10px;
-
-}
-
 
 .navtabs{
     position: relative;
@@ -58,9 +106,10 @@
 }
 
 .navtabs label{
-    padding: 5px 40px;
+    padding: 15px 40px;
     border-radius: 20px;
     color: maroon;
+    z-index: 1;
 }
 
 .navtabs label:hover{
@@ -70,7 +119,7 @@
     font-size: 120%;
 }
 
-
+/* main content styling */
 .home_page{
     height: 100vh;
     width: 100%;
@@ -118,6 +167,33 @@
     display: none;
 }
 
+/* Typing animation container */
+.typing{
+    font-size: 30px;
+    color: #fff;
+    border-right: 2px solid gold;
+    margin-left: 5px;
+    width: 0ch;
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    animation: typing 5s steps(16) infinite;
+}
+
+/* Typing animation keyframes */
+@keyframes typing{
+    0%{
+        width: 0ch;
+    }
+    50%{
+        width: 17ch;
+    }
+    100%{
+        width: 0ch;
+    }
+}
+
+/* Show content when corresponding hidden radio is checked */
 #About_Me:checked ~ .side_info .About_MeC,
 #My_Interests:checked ~ .side_info .My_InterestsC,
 #Skills:checked ~ .side_info .SkillsC,
@@ -127,15 +203,10 @@
     display: block;
 }
 
-#About_Me:checked ~ .menu .navtabs .About_Me{
-    background-color: maroon;
-}
-
-
-
+/* main content styling */
 .intro{
     color: gold;
-    background-color:rgb(54, 69, 79,0.5) ;
+    background-color:rgb(54, 69, 79,0.7) ;
     border-radius: 20px 20px 0px 0px;
 }
 
@@ -167,17 +238,14 @@
     padding: 20px;
 }
 
-.side_info .About_MeC{
-    position: relative;
-    top: 150px;
-}
 
-.side_info .About_MeC .in_photo{
+/* rounded photo positioned absolutely */
+.in_photo{
     height: 150px;
     width: 150px;
     background-color: transparent;
     border-radius: 50%;
-    border: 2px solid transparent;
+    border: 5px solid gold;
     position: absolute;
     top: -130px;
     left: 40%;
@@ -233,6 +301,7 @@
     flex-wrap: wrap;
 }
 
+/* progress circles */
 .progress{
   display: flex;
   align-items: center;
@@ -283,6 +352,7 @@
   color: maroon;
 }
 
+/* education section styling */
 .ed_item{
     display: flex;
     font-size: 23px;
@@ -329,6 +399,8 @@
     text-align: center;
 }
 
+
+/* My project section styling */
 .My_projectsC .details h5{
     color: #DCAE96;
 }
@@ -347,6 +419,8 @@
     border: 5px solid gold;
 }
 
+
+/* contact me styling */
 .icon-container {
   display: flex;
   gap: 20px;
@@ -451,6 +525,7 @@
     margin-top: 20px;
 }
 
+/* footer*/
 footer{
     padding: 15px;
     text-align: center;
@@ -458,6 +533,8 @@ footer{
     background-color: #DCAE96;
 }
 
+
+/* making the website responsive and well laid out in other screens */
 @media (max-width:1250px){
     .navbar{
     width: 100%;
@@ -468,6 +545,11 @@ footer{
     align-items: center;
     text-align: center;
     
+}
+
+.side_info .About_MeC{
+    position: relative;
+    top: 150px;
 }
 
 
@@ -481,7 +563,7 @@ footer{
     align-items: center;
 }
 .home_page{
-    height: 200vh;
+    height: 260vh;
 }
 .home_details{
     display: flex;
@@ -497,4 +579,9 @@ footer{
     position: relative;
     width: 100%;
 }
+}
+
+.cont{
+    position: relative;
+    margin-top: 50px;
 }
