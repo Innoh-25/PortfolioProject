@@ -3,6 +3,7 @@ It's Innoh_25! 🚀
 Welcome to my portfolio website, a place where I showcase my journey as a medical student with a passion for tech! 🧑‍⚕️💻
 
 🌟 About Me
+
 I'm Innocent Omurwa, a medical student who loves to explore the intersections of logic and creativity. My interests span across chess ♟️, mathematics ➕, and coding 👨‍💻. I believe in elegant solutions, whether it's diagnosing a clinical case or crafting clean code. My tech journey began with a fascination for how design influences user experience, and now I'm building accessible websites and exploring Python's power.
 
 🧠 My Interests
